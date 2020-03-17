@@ -1,0 +1,45 @@
+<!--home page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DopaNeed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="wdith=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+           
+            input {
+                width: 1000px;
+                height: 150px;
+            }
+            .logout {
+                float: right;
+            }
+            h3 {
+                text-align: right;
+                color: white;
+            }
+            .post {
+                width: 100%;
+                text-align: center;
+                height: 1000px;
+                padding-top: 5%;
+            }  
+        </style>
+        <h3><%= name %></h3>
+        <form action="/logout?_method=DELETE" method="POST">
+            <div class="logout">
+            <button type="submit">Log Out</button>
+            </div>
+        </form>
+
+        <form action="/home" method="POST">
+            <div class="post">
+              <label for="song"><b>Create a Post</b></label><br>
+              <input type="song" id="song" name="song"><br><br>
+              <button type="submit" formmethod="post">Submit</button>
+            </div>
+            <button type="submit" formmethod="post">Submit</button>
+        </form>
+    </head>
+</html>
